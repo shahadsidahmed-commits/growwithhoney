@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Heal with Honey</title>
+<meta name="description" content="Weekly one-to-one early years sessions in Dubai for children aged 3½ to 5 (FS1 and FS2), following the EYFS, with a private progress page for families.">
+<meta property="og:title" content="Heal with Honey">
+<meta property="og:description" content="Weekly one-to-one EYFS sessions in Dubai for FS1 and FS2 children.">
+<meta property="og:type" content="website">
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Figtree:wght@400;500;600&family=Gaegu:wght@400;700&display=swap">
+<style>
+/* Layout: a calm studio wall. Wide light margins, pebble shapes, hand-written "documentation" notes beside the work, three tabs (Home / Family progress / Enrol). */
+:root{
+  --paper:#F5F4EC;      /* unbleached paper, faint green */
+  --card:#FFFEF9;
+  --ink:#2F2B25;        /* graphite */
+  --ink-soft:#6B655A;
+  --line:#E2DED0;
+  --honey:#D9962B;      /* accent */
+  --honey-soft:#F6E6C4;
+  --sage:#7E9873;
+  --sage-soft:#DFE7D6;
+  --clay:#C98C72;
+  --clay-soft:#F1DED3;
+  --sky:#9DB8BF;
+  --sky-soft:#DCE7E8;
+  --notyet:#E7E3D6;
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-hand:"Gaegu", "Comic Neue", "Marker Felt", cursive;
+  --r:22px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1D1C18; --card:#262520; --ink:#EEEBE0; --ink-soft:#ADA794; --line:#3A3830;
+    --honey:#E8AE4C; --honey-soft:#4A3A1C; --sage:#9BB58F; --sage-soft:#2F3A2A;
+    --clay:#D9A089; --clay-soft:#4A3329; --sky:#A9C5CC; --sky-soft:#28383B; --notyet:#3A3830;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1D1C18; --card:#262520; --ink:#EEEBE0; --ink-soft:#ADA794; --line:#3A3830;
+  --honey:#E8AE4C; --honey-soft:#4A3A1C; --sage:#9BB58F; --sage-soft:#2F3A2A;
+  --clay:#D9A089; --clay-soft:#4A3329; --sky:#A9C5CC; --sky-soft:#28383B; --notyet:#3A3830;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6;padding-inline:20px;padding-block:0 60px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em;font-weight:600}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin-inline:auto}
+.hand{font-family:var(--f-hand);font-size:1.3em;line-height:1.1;color:var(--ink-soft)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+.muted{color:var(--ink-soft)}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);margin-inline:-20px;padding:14px 20px;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:1.2rem;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);padding:4px;border-radius:999px;flex-wrap:wrap}
+.tabs button{border:0;background:none;padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:500;font-size:.95rem;color:var(--ink-soft)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tabs button:hover:not([aria-selected="true"]){color:var(--ink)}
+
+section.view{padding-top:44px}
+
+/* ---------- HOME ---------- */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:28px 64px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:600}
+.hero h1 em{font-style:normal;color:var(--honey)}
+.hero .lede{font-size:1.15rem;max-width:34em;margin-top:22px;color:var(--ink-soft)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;cursor:pointer;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{padding:9px 16px;font-size:.92rem}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hero-art{position:relative;aspect-ratio:1/1.05;max-width:100%}
+.hero-art .pebble{position:absolute;border-radius:58% 42% 55% 45%/52% 48% 52% 48%}
+.p1{inset:4% 14% 30% 2%;background:var(--sage-soft)}
+.p2{inset:38% 0 6% 34%;background:var(--honey-soft);border-radius:46% 54% 40% 60%/55% 45% 55% 45%!important}
+.p3{width:26%;aspect-ratio:1;left:8%;bottom:6%;background:var(--clay-soft)}
+.hero-art .photo{position:absolute;inset:12% 22% 22% 12%;border-radius:200px 200px 24px 24px;background:
+  radial-gradient(circle at 30% 70%,var(--honey) 0 9%,transparent 9.5%),
+  radial-gradient(circle at 52% 74%,var(--clay) 0 7%,transparent 7.5%),
+  radial-gradient(circle at 70% 68%,var(--sage) 0 8%,transparent 8.5%),
+  linear-gradient(180deg,var(--sky-soft),var(--card));border:1.5px solid var(--line);display:flex;align-items:flex-end;justify-content:center;padding:16px;text-align:center}
+.hero-art .photo span{font-size:.82rem;color:var(--ink-soft);background:var(--card);padding:4px 10px;border-radius:99px}
+.hero-art .note{position:absolute;right:0;top:4%;transform:rotate(4deg);max-width:13em;font-size:1.25rem}
+.hero-art .photo img,.hero-art .photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.wow-badge{position:absolute;left:2%;bottom:24%;background:var(--honey);color:#2F2B25;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:99px;transform:rotate(-4deg);box-shadow:0 2px 0 var(--ink)}
+.hero-art .note{color:var(--ink)}
+.hero-art .note small{display:block;font-family:var(--f-body);font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+.hero-art .note::before{content:"";display:block;width:56px;height:2px;background:var(--ink-soft);margin-bottom:6px;transform:rotate(-12deg)}
+
+.ages{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.88rem;font-weight:500}
+.chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+.block{padding-block:56px;border-top:1px solid var(--line)}
+.block-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:end;margin-bottom:36px}
+.block-head h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.block-head p{max-width:36em;color:var(--ink-soft)}
+
+/* wow moments */
+.wow-wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.wow{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.wow .pic{position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,var(--honey-soft),var(--sage-soft))}
+.wow .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wow .pic .star{position:absolute;top:10px;left:10px;background:var(--honey);color:#2F2B25;font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.wow .cap{padding:14px 16px 18px;display:flex;flex-direction:column;gap:8px}
+.wow .cap .hand{color:var(--ink);font-size:1.25rem}
+.wow .cap .when{font-size:.78rem;color:var(--ink-soft);display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-family:var(--f-hand);font-size:1.1rem;color:var(--ink-soft)}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.plan{border-radius:26px;padding:28px clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:14px;border:1.5px solid var(--line);background:var(--card)}
+.plan.plus{background:var(--honey-soft);border-color:var(--honey)}
+.plan h3{font-size:1.6rem}
+.plan .price{font-family:var(--f-display);font-size:1.9rem;font-weight:600;line-height:1}
+.plan .price small{font-family:var(--f-body);font-size:.9rem;font-weight:400;color:var(--ink-soft)}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plan li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:.95rem}
+.plan li::before{content:"";width:12px;height:12px;border-radius:50%;margin-top:6px;background:var(--sage)}
+.plan.plus li::before{background:var(--honey)}
+.plan li.inherit{font-weight:600}
+.plan .btn{margin-top:auto;align-self:flex-start}
+.plan-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.plan-pick label{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--paper);cursor:pointer;font-size:.92rem}
+.plan-pick label:has(input:checked){border-color:var(--honey);background:var(--honey-soft)}
+.plan-pick input{accent-color:var(--honey);margin-top:4px}
+
+.package{margin-top:18px;border:1.5px dashed var(--honey);border-radius:22px;padding:22px clamp(22px,3vw,34px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.package h3{font-size:1.4rem;margin:4px 0}
+
+/* comparison */
+.compare{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr) minmax(0,1fr);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.compare > div{padding:18px 22px;border-top:1px solid var(--line);min-width:0}
+.compare .h{border-top:0;font-family:var(--f-display);font-weight:600;font-size:1.15rem;display:flex;flex-direction:column;gap:2px}
+.compare .h small{font-family:var(--f-body);font-weight:400;font-size:.85rem;color:var(--ink-soft)}
+.compare .k{font-weight:600;font-size:.92rem;color:var(--ink-soft)}
+.compare .one{background:var(--honey-soft)}
+.compare .h.one{background:var(--honey);color:#2F2B25}
+.compare .h.one small{color:#3d3527}
+.compare-foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:28px}
+.compare-foot .hand{font-size:1.35rem;color:var(--ink)}
+
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.who article{padding:28px;border-radius:var(--r);display:flex;flex-direction:column;gap:12px}
+.who article:nth-child(1){background:var(--sage-soft)}
+.who article:nth-child(2){background:var(--clay-soft)}
+.who h3{font-size:1.45rem}
+.who ul{margin:4px 0 0;padding-left:1.1em;display:grid;gap:6px}
+
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
+.steps li{list-style:none;padding:20px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.steps li b{font-family:var(--f-display);font-size:1.05rem}
+.steps li span.min{font-family:var(--f-hand);font-size:1.15rem;color:var(--honey)}
+.steps{padding:0;margin:0}
+
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.area{padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);display:flex;gap:12px;align-items:flex-start}
+.area .dot{flex:none;width:14px;height:14px;border-radius:50%;margin-top:5px}
+.area b{display:block;font-weight:600}
+.area small{color:var(--ink-soft)}
+
+.gallery{columns:4 220px;column-gap:12px}
+.gitem{break-inside:avoid;margin:0 0 12px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--sage-soft),var(--honey-soft));min-height:120px}
+.gitem img,.gitem video{display:block;width:100%;height:auto}
+.gitem .fallback{position:relative;min-height:180px}
+.tile{border-radius:18px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:12px;border:1px solid var(--line)}
+.tile::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;right:-12%;top:-18%;background:var(--card);opacity:.55}
+.tile span{position:relative;font-family:var(--f-hand);font-size:1.15rem;line-height:1.05;color:var(--ink)}
+.tile em{position:absolute;top:10px;left:12px;font-style:normal;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.tile.tall{grid-row:span 2}.tile.wide{grid-column:span 2}
+.tile.v::after{content:"▶";position:absolute;top:10px;right:12px;font-size:.8rem;color:var(--ink-soft)}
+
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:center}
+.about .portrait{width:100%;max-width:360px;justify-self:center;aspect-ratio:4/5;border-radius:200px 200px 26px 26px;background:linear-gradient(160deg,var(--honey-soft),var(--sage-soft));display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;max-width:100%}
+.about h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px}
+.about p+p{margin-top:12px}
+.ph{background:var(--honey-soft);padding:0 4px;border-radius:4px}
+
+.cta-band{margin-top:56px;background:var(--ink);color:var(--paper);border-radius:28px;padding:44px clamp(24px,5vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:16em}
+.cta-band .btn{background:var(--honey);border-color:var(--honey);color:#2F2B25}
+.cta-band .btn.ghost{background:transparent}
+
+/* ---------- PROGRESS ---------- */
+.notice{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--sky-soft);border-radius:14px;padding:10px 16px;font-size:.92rem;margin-bottom:26px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.pill.s{background:var(--sage-soft);color:var(--ink)} .pill.s::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sage)}
+.pill.e{background:var(--honey-soft);color:var(--ink)} .pill.e::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--honey)}
+.pill.n{background:var(--notyet);color:var(--ink-soft)} .pill.n::before{content:"";width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink-soft)}
+.pill.ex{background:var(--ink);color:var(--paper)}
+
+.child{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:22px;align-items:center;margin-bottom:28px}
+.avatar{width:84px;height:84px;border-radius:50% 46% 52% 48%;background:var(--clay-soft);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:2rem;font-weight:700;color:var(--clay)}
+.child h1{font-size:clamp(1.9rem,4vw,2.8rem)}
+.child .meta{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:6px;color:var(--ink-soft);font-size:.95rem}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:none;border-radius:999px;padding:7px 14px;font-size:.88rem;cursor:pointer;color:var(--ink-soft);font-weight:500}
+.seg button[aria-pressed="true"]{background:var(--honey-soft);color:var(--ink)}
+
+.totals{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.totals .t{flex:1 1 150px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.totals .t b{display:block;font-family:var(--f-display);font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.totals .t span{font-size:.88rem;color:var(--ink-soft)}
+
+.charts{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;min-width:0}
+.panel h3{font-size:1.2rem;margin-bottom:4px}
+.panel .sub{font-size:.9rem;color:var(--ink-soft);margin-bottom:16px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--ink-soft);margin-top:12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.bars{display:grid;gap:14px}
+.bar-row{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) 42px;gap:12px;align-items:center;font-size:.9rem}
+.bar-row .lbl{line-height:1.2}
+.bar-row .lbl small{display:block;color:var(--ink-soft);font-size:.75rem}
+.bar{display:flex;height:16px;border-radius:99px;overflow:hidden;background:var(--notyet)}
+.bar i{display:block;height:100%}
+.bar-row .pct{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+svg.line text{fill:var(--ink-soft);font-size:11px;font-family:var(--f-body)}
+svg.line .grid{stroke:var(--line);stroke-width:1}
+svg.line .area-fill{fill:var(--sage-soft)}
+svg.line .ln{fill:none;stroke:var(--sage);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+svg.line .dot{fill:var(--card);stroke:var(--sage);stroke-width:2}
+svg.line .end{fill:var(--sage)}
+svg.line .endlbl{fill:var(--ink);font-weight:600;font-size:12px}
+
+.checklist{margin-top:18px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:18px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 12px;font-size:.84rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.filters button i{width:9px;height:9px;border-radius:50%}
+.filters button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.stmts{list-style:none;margin:0;padding:0;display:grid}
+.stmts li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;padding:13px 0;border-top:1px solid var(--line);align-items:start}
+.stmts li:first-child{border-top:0}
+.stmts li .a{font-size:.75rem;color:var(--ink-soft);grid-column:1/-1;display:flex;align-items:center;gap:6px}
+.stmts li .a i{width:8px;height:8px;border-radius:50%}
+.stmts li p{font-size:.96rem}
+.stmts li .w{font-size:.75rem;color:var(--ink-soft);text-align:right;margin-top:4px}
+.side{display:grid;gap:18px;align-content:start}
+.home-tip{background:var(--honey-soft);border:0}
+.home-tip .hand{color:var(--ink);font-size:1.4rem}
+.why{font-size:.9rem}
+.why p+p{margin-top:8px}
+
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+.story{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.story .img{height:140px;display:flex;align-items:flex-end;padding:12px 16px}
+.story .img span{font-family:var(--f-hand);font-size:1.2rem}
+.story .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.story h4{font-size:1.15rem}
+.story .tags{display:flex;gap:6px;flex-wrap:wrap}
+.story .next{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem}
+.story .next b{font-weight:600}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-top:40px}
+.section-title h2{font-size:1.7rem}
+
+/* ---------- ENROL ---------- */
+.enrol{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:start}
+.enrol-side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 90px);display:grid;gap:18px}
+.enrol-side h1{font-size:clamp(2rem,4vw,2.8rem)}
+.stepper{list-style:none;padding:0;margin:0;display:grid;gap:4px}
+.stepper button{width:100%;text-align:left;border:0;background:none;padding:10px 12px;border-radius:12px;cursor:pointer;display:flex;gap:12px;align-items:center;color:var(--ink-soft)}
+.stepper button .n{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600;flex:none}
+.stepper button[aria-current="step"]{background:var(--card);color:var(--ink);font-weight:600}
+.stepper button[aria-current="step"] .n{background:var(--honey);border-color:var(--honey);color:#2F2B25}
+.stepper button.done .n{background:var(--sage-soft);border-color:var(--sage);color:var(--ink)}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,40px)}
+.form-card h2{font-size:1.7rem;margin-bottom:6px}
+.form-card > .muted{margin-bottom:24px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label,.f .lab{font-weight:600;font-size:.9rem}
+.f .hint{font-size:.82rem;color:var(--ink-soft)}
+.f input[type=text],.f input[type=email],.f input[type=tel],.f input[type=date],.f select,.f textarea{width:100%;border:1.5px solid var(--line);background:var(--paper);border-radius:12px;padding:11px 13px}
+.f textarea{min-height:90px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--honey)}
+.yg{font-family:var(--f-hand);font-size:1.25rem;color:var(--sage)}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:inline-flex;gap:8px;align-items:center;border:1.5px solid var(--line);border-radius:99px;padding:7px 13px;font-weight:500;font-size:.9rem;cursor:pointer;background:var(--paper)}
+.checks input{accent-color:var(--honey)}
+.drop{border:2px dashed var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;background:var(--paper)}
+.drop.on{border-color:var(--honey);background:var(--honey-soft)}
+.drop b{font-family:var(--f-display);font-size:1.05rem}
+.files{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px;width:100%}
+.files li{display:flex;justify-content:space-between;gap:10px;font-size:.88rem;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;min-width:0}
+.files li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.consent{border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:10px;background:var(--paper)}
+.consent + .consent{margin-top:14px}
+.consent h3{font-size:1.1rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.consent p,.consent li{font-size:.9rem;color:var(--ink-soft)}
+.consent ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.tick{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.93rem;cursor:pointer}
+.tick input{margin-top:4px;accent-color:var(--honey);width:18px;height:18px;flex:none}
+.req{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.opt{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.sm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+.sm-grid label{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--card);cursor:pointer;font-size:.9rem}
+.sm-grid input{accent-color:var(--honey);margin-top:3px}
+.sm-grid label:has(input:checked){border-color:var(--honey)}
+.sig{display:grid;gap:8px}
+.sig canvas{width:100%;height:150px;background:var(--paper);border:1.5px dashed var(--line);border-radius:14px;touch-action:none;cursor:crosshair;display:block}
+.form-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap}
+.err{color:var(--clay);font-size:.88rem;font-weight:600}
+.done-card{text-align:left;display:grid;gap:14px}
+.done-card h2{font-size:2rem}
+.summary{display:grid;gap:6px;font-size:.92rem;background:var(--paper);border-radius:14px;padding:16px 18px}
+.summary div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:6px}
+.summary div:first-child{border-top:0;padding-top:0}
+.summary span:last-child{text-align:right;color:var(--ink-soft)}
+
+footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.88rem;color:var(--ink-soft)}
+
+@media (max-width:900px){
+  .hero,.about,.block-head,.charts,.checklist,.enrol{grid-template-columns:minmax(0,1fr)}
+  .hero{gap:20px;padding-bottom:40px}
+  .hero-art{max-width:420px;width:100%;margin-inline:auto}
+  .steps{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+  .wow-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .plans,.plan-pick{grid-template-columns:minmax(0,1fr)}
+  .enrol-side{position:static}
+  .about .portrait{max-width:340px}
+}
+@media (max-width:640px){
+  body{padding-inline:16px}
+  .top{margin-inline:-16px;padding-inline:16px}
+  .compare{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .compare .k{grid-column:1/-1;padding-bottom:4px;background:var(--paper)}
+  .compare .k + div{border-top:0}
+  .compare .h.blank{display:none}
+  .compare > div{padding:14px}
+  .fields{grid-template-columns:minmax(0,1fr)}
+  .bar-row{grid-template-columns:minmax(0,1fr) 42px}
+  .bar-row .bar{grid-column:1/-1;grid-row:2}
+  .child{grid-template-columns:auto minmax(0,1fr)}
+  .child .seg{grid-column:1/-1}
+  .tabs button{padding:7px 12px;font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" data-go="home" aria-label="Heal with Honey home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 34.7 11.5v17L20 37 5.3 28.5v-17Z" fill="var(--honey)"/><circle cx="20" cy="20" r="6.5" fill="var(--paper)"/><circle cx="20" cy="20" r="2.6" fill="var(--honey)"/></svg>
+      Heal with Honey
+    </a>
+    <nav class="tabs" role="tablist" aria-label="Site sections">
+      <button role="tab" id="t-home" aria-controls="home" aria-selected="true" data-go="home">Home</button>
+      <button role="tab" id="t-progress" aria-controls="progress" aria-selected="false" data-go="progress">Family progress</button>
+      <button role="tab" id="t-enrol" aria-controls="enrol" aria-selected="false" data-go="enrol">Enrol</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ======================= HOME ======================= -->
+<section class="view" id="home" role="tabpanel" aria-labelledby="t-home">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Weekly one-to-one sessions · Dubai</p>
+      <h1 style="margin-top:14px">Your child, <em>one-to-one</em>, at their own pace.</h1>
+      <p class="lede">Play-based early years sessions for children aged 3½ to 5, following the EYFS. One child and one teacher, every week, with a clear picture of progress that you can see from home.</p>
+      <div class="ctas">
+        <button class="btn" data-go="enrol">Enrol your child</button>
+        <button class="btn ghost" data-go="progress">See how progress is shared</button>
+      </div>
+      <div class="ages">
+        <span class="chip"><i style="background:var(--sage)"></i>FS1 · ages 3–4</span>
+        <span class="chip"><i style="background:var(--honey)"></i>FS2 · ages 4–5</span>
+        <span class="chip"><i style="background:var(--clay)"></i>EYFS Development Matters</span>
+      </div>
+    </div>
+    <figure class="hero-art" id="wowHero" style="margin:0">
+      <div class="pebble p1"></div><div class="pebble p2"></div><div class="pebble p3"></div>
+      <div class="photo"></div>
+      <span class="wow-badge">Wow moment of the week</span>
+      <figcaption class="note hand"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Comparison -->
+  <div class="block">
+    <div class="block-head">
+      <h2>Classroom learning and one-to-one learning do different jobs.</h2>
+      <p>Nursery gives children friendships, routines and group play. A weekly one-to-one session adds what a busy classroom rarely can: an adult who notices every small step and plans the next one around your child alone.</p>
+    </div>
+    <div class="compare" role="table" aria-label="Classroom compared with one-to-one sessions">
+      <div class="h blank" role="columnheader"></div>
+      <div class="h" role="columnheader">In the classroom<small>One teacher, often 20+ children</small></div>
+      <div class="h one" role="columnheader">In a one-to-one session<small>One teacher, one child</small></div>
+
+      <div class="k" role="rowheader">Adult attention</div>
+      <div role="cell">Shared across the whole group. Quiet children can go a full day without a focused conversation.</div>
+      <div class="one" role="cell">The whole session belongs to your child. Every answer, hesitation and idea is noticed.</div>
+
+      <div class="k" role="rowheader">Pace</div>
+      <div role="cell">Set for the middle of the class. Some children wait, others are left behind.</div>
+      <div class="one" role="cell">Moves when your child is ready. We stay on a skill until it is secure, or stretch further when they are flying.</div>
+
+      <div class="k" role="rowheader">Planning</div>
+      <div role="cell">Topics planned for the year group as a whole.</div>
+      <div class="one" role="cell">Each week is planned from last week’s observations and your child’s interests.</div>
+
+      <div class="k" role="rowheader">Extra support</div>
+      <div role="cell">Speech, attention or fine-motor needs may wait for a referral or a free moment.</div>
+      <div class="one" role="cell">Targets from nursery, speech or OT reports are built into play every single week.</div>
+
+      <div class="k" role="rowheader">What you hear back</div>
+      <div role="cell">Termly reports and a short parents’ evening.</div>
+      <div class="one" role="cell">A note after every session and a live progress page against the EYFS areas.</div>
+    </div>
+    <div class="compare-foot">
+      <p class="hand">One-to-one sessions sit alongside nursery, not instead of it.</p>
+      <p class="muted">Most of the children we work with attend nursery or FS1 / FS2 at school. Sessions build on what their teachers are doing, and with your permission we share notes with them.</p>
+    </div>
+  </div>
+
+  <!-- Who it's for -->
+  <div class="block">
+    <div class="block-head">
+      <h2>Who it helps most</h2>
+      <p>Every child benefits from undivided attention. These two groups tend to benefit the most.</p>
+    </div>
+    <div class="who">
+      <article>
+        <p class="eyebrow">Extra support</p>
+        <h3>Children who need a little more time</h3>
+        <p>For children whose nursery has flagged a concern, or who are working with a speech therapist, OT or other specialist.</p>
+        <ul>
+          <li>Speech, language and new vocabulary</li>
+          <li>Attention, listening and turn-taking</li>
+          <li>Fine-motor skills for pencil grip and scissors</li>
+          <li>Confidence, separation and naming feelings</li>
+        </ul>
+      </article>
+      <article>
+        <p class="eyebrow">School readiness</p>
+        <h3>Children ready for a stretch before FS2 or Year 1</h3>
+        <p>For curious children who are ready for more than the classroom pace allows, and for families preparing for school assessments.</p>
+        <ul>
+          <li>Phonics, letter sounds and early blending</li>
+          <li>Number sense, subitising and counting beyond 10</li>
+          <li>Early mark-making and writing their name</li>
+          <li>Independence: following two-part instructions, managing their own things</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <!-- Session -->
+  <div class="block">
+    <div class="block-head">
+      <h2>Inside a weekly session</h2>
+      <p>Sessions are led by your child’s interests, with natural materials, real objects and open-ended invitations to play, in the spirit of Reggio Emilia. The adult’s job is to notice, listen and gently extend.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="min">5 min</span><b>Hello and check-in</b><span class="muted">How are we feeling today? A song, a feelings card, a quiet start.</span></li>
+      <li><span class="min">15 min</span><b>An invitation to play</b><span class="muted">A tray of loose parts, clay or a story basket set up around this week’s target.</span></li>
+      <li><span class="min">15 min</span><b>Focused learning</b><span class="muted">Phonics, number or fine-motor work at exactly the right level.</span></li>
+      <li><span class="min">10 min</span><b>Story and talk</b><span class="muted">A shared book, retelling and new words.</span></li>
+      <li><span class="min">after</span><b>Your session note</b><span class="muted">What we saw, a photo, and one idea to try at home this week.</span></li>
+    </ol>
+  </div>
+
+  <!-- Wow moments -->
+  <div class="block" id="wow">
+    <div class="block-head">
+      <h2>Wow moments</h2>
+      <p>When a child does something that makes us say “wow”, a first, a breakthrough, a brilliant idea, we capture it. New moments go up every week, always with the family’s written consent.</p>
+    </div>
+    <div class="wow-wall" id="wowWall"></div>
+    <p class="hand" style="margin-top:14px">sample captions for now · we’ll write the real ones to match each photo</p>
+  </div>
+
+  <!-- EYFS areas -->
+  <div class="block">
+    <div class="block-head">
+      <h2>Following the EYFS, all seven areas</h2>
+      <p>The Early Years Foundation Stage is the framework used in British-curriculum nurseries and FS classes across Dubai. We track progress against its Development Matters guidance, so what you see here matches the language your child’s school uses.</p>
+    </div>
+    <div class="areas" id="areaList"></div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="block">
+    <div class="block-head">
+      <h2>From our sessions</h2>
+      <p>Moments from real sessions, shared with each family’s written consent.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <!-- About -->
+  <div class="block about">
+    <div class="portrait"><span class="hand">teacher portrait</span></div>
+    <div>
+      <p class="eyebrow">Meet your child’s teacher</p>
+      <h2>Hello, I’m <span class="ph">[Name]</span>.</h2>
+      <p><span class="ph">[Short bio: qualifications, years teaching EYFS in Dubai, any SEN or speech-and-language training.]</span></p>
+      <p>I started Heal with Honey because I kept seeing children who were bright and ready, but needed someone to sit beside them and slow down. One hour a week, with the right adult, makes a visible difference by the end of a term.</p>
+      <p class="hand" style="margin-top:16px">Holds a valid UAE private tutor work permit · Permit no. [________]</p>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Spaces open each term. Start with a free 20-minute call.</h2>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn ghost" data-go="progress" data-scroll="plans" style="color:var(--paper);border-color:var(--paper)">Compare plans</button>
+      <button class="btn" data-go="enrol">Start enrolment</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROGRESS ======================= -->
+<section class="view" id="progress" role="tabpanel" aria-labelledby="t-progress" hidden>
+  <div class="notice"><span class="pill ex">Example</span>This is a sample child with made-up data, to show families what their private progress page will look like after signing in.</div>
+
+  <div class="child">
+    <div class="avatar" aria-hidden="true">Z</div>
+    <div>
+      <p class="eyebrow">Progress journal · Autumn term 2026</p>
+      <h1>Zara’s learning</h1>
+      <div class="meta"><span>FS2 · age 4 yrs 9 mths</span><span>9 of 10 weekly sessions</span><span>Last updated after week 9</span></div>
+    </div>
+    <div class="seg" role="group" aria-label="Development Matters band">
+      <button data-band="y34" aria-pressed="false">3 & 4-year-olds</button>
+      <button data-band="rec" aria-pressed="true">Reception</button>
+    </div>
+  </div>
+
+  <div class="totals" id="totals"></div>
+
+  <div class="charts">
+    <div class="panel">
+      <h3>Where Zara is in each area</h3>
+      <p class="sub" id="barsSub">Development Matters statements, Reception band</p>
+      <div class="bars" id="bars"></div>
+      <div class="legend"><span><i style="background:var(--sage)"></i>Secure</span><span><i style="background:var(--honey)"></i>Emerging</span><span><i style="background:var(--notyet)"></i>Not yet</span></div>
+    </div>
+    <div class="panel">
+      <h3>Statements secured this term</h3>
+      <p class="sub">Running total, week by week</p>
+      <div id="line"></div>
+    </div>
+  </div>
+
+  <div class="checklist">
+    <div class="panel">
+      <h3>The checklist</h3>
+      <p class="sub">Each statement is marked after observing it across more than one session.</p>
+      <div class="filters" id="filters"></div>
+      <ul class="stmts" id="stmts"></ul>
+    </div>
+    <div class="side">
+      <div class="panel home-tip">
+        <p class="eyebrow">Try at home this week</p>
+        <p class="hand" id="tipText" style="margin-top:8px"></p>
+      </div>
+      <div class="panel why">
+        <h3>How to read this page</h3>
+        <p><span class="pill s">Secure</span> Zara does this confidently, on her own, in different situations.</p>
+        <p><span class="pill e">Emerging</span> She is starting to, sometimes with help.</p>
+        <p><span class="pill n">Not yet</span> Coming up. This is normal. Children are not expected to be secure in everything until the end of FS2.</p>
+        <p>Development Matters describes typical development, not a test. Children move at different speeds in different areas, which is exactly why one-to-one teaching helps.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <h2>Learning stories</h2>
+    <p class="hand">short write-ups of moments worth remembering</p>
+  </div>
+  <div class="stories" id="stories"></div>
+
+  <div class="section-title" id="plans">
+    <h2>Two ways to join</h2>
+    <p class="hand">weekly sessions for every family · progress tracking is the upgrade</p>
+  </div>
+  <div class="plans">
+    <article class="plan">
+      <p class="eyebrow">Plan 1</p>
+      <h3>One-to-one sessions</h3>
+      <p class="price">AED 250 <small>per session · weekly</small></p>
+      <ul>
+        <li>A weekly one-to-one session, play-based and EYFS-led</li>
+        <li>Sessions planned from your child’s nursery and specialist reports</li>
+        <li>A short note after each session</li>
+        <li>A catch-up call at the end of each term</li>
+      </ul>
+      <button class="btn ghost" data-plan="sessions">Enrol for sessions</button>
+    </article>
+    <article class="plan plus">
+      <p class="eyebrow">Plan 2 · most detail</p>
+      <h3>Sessions + Family Progress</h3>
+      <p class="price">AED 350 <small>per session · weekly</small></p>
+      <ul>
+        <li class="inherit">Everything in One-to-one sessions, plus:</li>
+        <li>Your child’s private progress page, like the example above</li>
+        <li>Development Matters tracking across all seven areas, updated weekly</li>
+        <li>Learning stories and wow moments of your own child, with photos</li>
+        <li>A “try at home” idea every week</li>
+        <li>An end-of-term written report you can share with school or specialists</li>
+      </ul>
+      <button class="btn" data-plan="progress">Enrol with Family Progress</button>
+    </article>
+  </div>
+  <div class="package">
+    <div>
+      <p class="eyebrow">Package</p>
+      <h3>4 sessions for AED 1,000</h3>
+      <p class="muted">Four weekly one-to-one sessions, booked and paid together.</p>
+    </div>
+    <button class="btn ghost" data-plan="package">Choose the package</button>
+  </div>
+</section>
+
+<!-- ======================= ENROL ======================= -->
+<section class="view" id="enrol" role="tabpanel" aria-labelledby="t-enrol" hidden>
+  <div class="enrol">
+    <aside class="enrol-side">
+      <p class="eyebrow">Enrolment</p>
+      <h1>Tell us about your child</h1>
+      <p class="muted">Takes about 10 minutes. Have your child’s latest nursery report to hand if you can.</p>
+      <ol class="stepper" id="stepper"></ol>
+      <p class="hand">your information is only used to plan your child’s sessions</p>
+    </aside>
+
+    <form class="form-card" id="form" novalidate>
+      <!-- Step 1 -->
+      <fieldset class="step" data-step="0" style="border:0;padding:0;margin:0">
+        <h2>Parent or guardian</h2>
+        <p class="muted">The main contact for sessions and progress updates.</p>
+        <div class="fields">
+          <div class="f"><label for="p_name">Full name</label><input type="text" id="p_name" required autocomplete="name"></div>
+          <div class="f"><label for="p_rel">Relationship to child</label><select id="p_rel"><option>Mother</option><option>Father</option><option>Legal guardian</option><option>Other</option></select></div>
+          <div class="f"><label for="p_email">Email</label><input type="email" id="p_email" required autocomplete="email"></div>
+          <div class="f"><label for="p_tel">Mobile (WhatsApp)</label><input type="tel" id="p_tel" required placeholder="+971 5_ ___ ____" autocomplete="tel"></div>
+          <div class="f"><label for="p_area">Area of Dubai</label><input type="text" id="p_area" placeholder="e.g. Jumeirah, Arabian Ranches"></div>
+          <div class="f"><label for="p_where">Preferred location</label><select id="p_where"><option>At our home</option><option>At the studio</option><option>Either</option></select></div>
+          <div class="f full"><span class="lab">Plan</span>
+            <div class="plan-pick">
+              <label><input type="radio" name="plan" id="plan_sessions" value="sessions" checked><span><b>One-to-one sessions</b><br><span class="muted">AED 250 per session</span></span></label>
+              <label><input type="radio" name="plan" id="plan_progress" value="progress"><span><b>Sessions + Family Progress</b><br><span class="muted">AED 350 per session, with the progress page</span></span></label>
+              <label><input type="radio" name="plan" id="plan_package" value="package"><span><b>4-session package</b><br><span class="muted">AED 1,000 for 4 sessions</span></span></label>
+            </div>
+          </div>
+          <div class="f full"><label for="p_emerg">Emergency contact (name and number)</label><input type="text" id="p_emerg" required></div>
+        </div>
+      </fieldset>
+
+      <!-- Step 2 -->
+      <fieldset class="step" data-step="1" hidden style="border:0;padding:0;margin:0">
+        <h2>About your child</h2>
+        <p class="muted">Everything here helps us plan the very first session.</p>
+        <div class="fields">
+          <div class="f"><label for="c_name">Child’s first name</label><input type="text" id="c_name" required></div>
+          <div class="f"><label for="c_dob">Date of birth</label><input type="date" id="c_dob" required><span class="yg" id="yg"></span></div>
+          <div class="f"><label for="c_nursery">Current nursery or school</label><input type="text" id="c_nursery"></div>
+          <div class="f"><label for="c_lang">Languages spoken at home</label><input type="text" id="c_lang" placeholder="e.g. English, Arabic, Hindi"></div>
+          <div class="f full"><span class="lab">What would you most like help with?</span>
+            <div class="checks" id="goals">
+              <label><input type="checkbox" value="Speech and language">Speech and language</label>
+              <label><input type="checkbox" value="Phonics and early reading">Phonics and early reading</label>
+              <label><input type="checkbox" value="Number and maths">Number and maths</label>
+              <label><input type="checkbox" value="Fine motor and writing">Fine motor and writing</label>
+              <label><input type="checkbox" value="Attention and listening">Attention and listening</label>
+              <label><input type="checkbox" value="Confidence and feelings">Confidence and feelings</label>
+              <label><input type="checkbox" value="School readiness">School readiness</label>
+            </div>
+          </div>
+          <div class="f full"><label for="c_interests">What does your child love right now?</label><textarea id="c_interests" placeholder="Dinosaurs, trains, a favourite book… we plan sessions around these."></textarea></div>
+          <div class="f full"><label for="c_health">Health, allergies, diagnoses or additional needs</label><textarea id="c_health" placeholder="Anything we should know to keep your child safe and comfortable."></textarea><span class="hint">This is sensitive personal data. It is only used to keep your child safe and plan their sessions.</span></div>
+        </div>
+      </fieldset>
+
+      <!-- Step 3 -->
+      <fieldset class="step" data-step="2" hidden style="border:0;padding:0;margin:0">
+        <h2>Reports and assessments</h2>
+        <p class="muted">Upload anything that helps us see where your child is today. PDFs, photos of paper reports and Word files are all fine.</p>
+        <div style="display:grid;gap:16px">
+          <div class="drop" data-drop="nursery">
+            <b>Nursery or school reports</b>
+            <span class="muted">Termly reports, EYFS profile, learning journal pages.</span>
+            <label class="btn ghost small" for="up_nursery">Choose files</label>
+            <input type="file" id="up_nursery" multiple accept=".pdf,.doc,.docx,image/*" hidden>
+            <ul class="files" id="list_nursery"></ul>
+          </div>
+          <div class="drop" data-drop="spec">
+            <b>Specialist reports</b>
+            <span class="muted">Speech and language therapy, occupational therapy, educational psychologist, developmental paediatrician.</span>
+            <label class="btn ghost small" for="up_spec">Choose files</label>
+            <input type="file" id="up_spec" multiple accept=".pdf,.doc,.docx,image/*" hidden>
+            <ul class="files" id="list_spec"></ul>
+          </div>
+          <div class="fields">
+            <div class="f full"><span class="lab">Is your child currently seeing any specialists?</span>
+              <div class="checks" id="specs">
+                <label><input type="checkbox" value="Speech and language therapist">Speech & language</label>
+                <label><input type="checkbox" value="Occupational therapist">OT</label>
+                <label><input type="checkbox" value="Educational psychologist">Ed. psychologist</label>
+                <label><input type="checkbox" value="Behaviour therapist">Behaviour / ABA</label>
+                <label><input type="checkbox" value="Paediatrician">Paediatrician</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Step 4 -->
+      <fieldset class="step" data-step="3" hidden style="border:0;padding:0;margin:0">
+        <h2>Consent</h2>
+        <p class="muted">Required consents let us teach your child safely. Optional ones are entirely your choice and do not affect your place. You can withdraw any consent at any time by message or email.</p>
+
+        <div class="consent">
+          <h3>Personal data and privacy <span class="req">Required</span></h3>
+          <p>We collect and store your and your child’s information in line with the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021). We use it only to plan, deliver and report on sessions. We keep it securely, never sell it, and delete it within 12 months of sessions ending unless you ask us to delete it sooner. You can ask to see, correct or delete it at any time.</p>
+          <label class="tick"><input type="checkbox" id="k_data" required>I consent to Heal with Honey collecting and using my and my child’s personal data as described.</label>
+        </div>
+
+        <div class="consent">
+          <h3>Health and additional needs information <span class="req">Required if shared</span></h3>
+          <p>Health information and specialist reports are sensitive data. We use them only to keep your child safe and to plan their learning.</p>
+          <label class="tick"><input type="checkbox" id="k_health">I consent to the health and specialist information I have shared being used for this purpose.</label>
+        </div>
+
+        <div class="consent">
+          <h3>Safeguarding and emergencies <span class="req">Required</span></h3>
+          <ul>
+            <li>Your child’s welfare comes first. We follow UAE Federal Law No. 3 of 2016 on Child Rights (Wadeema’s Law), which means any concern about a child’s safety must be reported to the appropriate authorities.</li>
+            <li>In a medical emergency we will call 998 and then you. A parent or named adult stays on site for home sessions.</li>
+          </ul>
+          <label class="tick"><input type="checkbox" id="k_safe" required>I have read and understand the safeguarding policy and agree to emergency first aid being given if needed.</label>
+        </div>
+
+        <div class="consent">
+          <h3>Sharing with my child’s nursery or specialists <span class="opt">Optional</span></h3>
+          <p>Lets us talk with your child’s teacher or therapist so everyone works on the same goals.</p>
+          <label class="tick"><input type="checkbox" id="k_share">I agree to Heal with Honey sharing progress notes with, and asking for updates from, the nursery and specialists named in this form.</label>
+        </div>
+
+        <div class="consent">
+          <h3>Photos and videos for my child’s progress page <span class="opt">Optional</span></h3>
+          <p>Private photos of your child’s work and play, visible only to your family on your progress page.</p>
+          <label class="tick"><input type="checkbox" id="k_record" checked>I agree to photos and short videos being taken during sessions for my child’s private learning record.</label>
+        </div>
+
+        <div class="consent">
+          <h3>Social media and website <span class="opt">Optional</span></h3>
+          <p>We would love to share moments from sessions to show other families what one-to-one learning looks like. Under UAE law (Federal Decree-Law No. 34 of 2021), we will never publish an image of your child without your written consent. Choose exactly what you are comfortable with:</p>
+          <div class="sm-grid" id="sm">
+            <label><input type="radio" name="sm" value="none" checked><span><b>No, please don’t share</b><br><span class="muted">Nothing is ever posted.</span></span></label>
+            <label><input type="radio" name="sm" value="hands"><span><b>Hands and work only</b><br><span class="muted">Close-ups of play and artwork. No face, no voice.</span></span></label>
+            <label><input type="radio" name="sm" value="noface"><span><b>Child, face not shown</b><br><span class="muted">Back of head, side view or face blurred. Voice may be heard.</span></span></label>
+            <label><input type="radio" name="sm" value="full"><span><b>Child, face visible</b><br><span class="muted">Photos and video including your child’s face and voice.</span></span></label>
+          </div>
+          <div class="checks" id="platforms" style="margin-top:4px">
+            <label><input type="checkbox" value="Instagram" checked>Instagram</label>
+            <label><input type="checkbox" value="TikTok">TikTok</label>
+            <label><input type="checkbox" value="Facebook">Facebook</label>
+            <label><input type="checkbox" value="Website" checked>This website</label>
+          </div>
+          <ul>
+            <li>Your child’s name, school or location are never included in posts.</li>
+            <li>We send you anything featuring your child before it is posted, if you would like to see it first.</li>
+            <li>If you withdraw consent, we remove posts featuring your child within 7 days.</li>
+          </ul>
+          <label class="tick"><input type="checkbox" id="k_preview" checked>Please show me content before it is posted.</label>
+        </div>
+
+        <div class="consent sig">
+          <h3>Signature <span class="req">Required</span></h3>
+          <div class="fields">
+            <div class="f"><label for="s_name">Parent or guardian name</label><input type="text" id="s_name" required></div>
+            <div class="f"><label for="s_date">Date</label><input type="date" id="s_date" required></div>
+          </div>
+          <span class="lab" style="font-weight:600;font-size:.9rem">Sign below with your finger or mouse</span>
+          <canvas id="sig" aria-label="Signature pad"></canvas>
+          <div><button type="button" class="btn ghost small" id="sigClear">Clear signature</button></div>
+        </div>
+      </fieldset>
+
+      <!-- Done -->
+      <div class="step done-card" data-step="4" hidden>
+        <p class="eyebrow">Almost there</p>
+        <h2>Thank you, <span id="d_name"></span>.</h2>
+        <p class="muted">Online enrolment is still being set up, so this form has not been sent anywhere yet. To book your free 20-minute call now, message us on WhatsApp: <span class="ph">[+971 number]</span>.</p>
+        <div class="summary" id="summary"></div>
+        <div><button type="button" class="btn ghost small" id="restart">Start again</button></div>
+      </div>
+
+      <div class="form-nav" id="nav">
+        <button type="button" class="btn ghost" id="back">Back</button>
+        <span class="err" id="err" role="alert"></span>
+        <button type="submit" class="btn" id="next">Continue</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span>Heal with Honey · One-to-one early years sessions · Dubai, UAE</span>
+  <span>Follows the EYFS statutory framework and Development Matters (DfE, 2023)</span>
+</footer>
+</main>
+
+<script>
+(function(){
+/* ---------------- tabs ---------------- */
+const views=['home','progress','enrol'];
+function go(id,scroll){
+  if(!views.includes(id)) id='home';
+  views.forEach(v=>{document.getElementById(v).hidden=v!==id;document.getElementById('t-'+v).setAttribute('aria-selected',v===id)});
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  if(scroll!==false) window.scrollTo({top:0});
+}
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();go(b.dataset.go,!b.dataset.scroll);if(b.dataset.scroll)document.getElementById(b.dataset.scroll).scrollIntoView({block:'start'})}));
+document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('plan_'+b.dataset.plan).checked=true;go('enrol')}));
+
+/* ---------------- photos and videos ----------------
+   Weekly update: add a new line to the TOP of WOW. The first entry shows in the hero. */
+const SHOP='https://cdn.shopify.com/s/files/1/0713/2332/0394/files/';
+const PHOTOS=['f5818ab4-3b96-4e0c-bf41-56cabcf20229','168e14f6-ee44-49fe-ab5e-88e3826656ad','f178602c-2327-4b90-ac01-df5c35386c8f','13428a4b-c024-431c-ac73-c910f3a7e16e','2a79a22e-d1ba-470e-b013-ba113d981a6d','02e4835a-6151-422b-a252-d88deeed211c','ec9c83db-b502-4a9a-bd08-3825e4f019c6','e48c78a2-a066-47f3-9651-31bfeb05bc1e','2f1b4603-4375-4e4d-868e-b588240b20d8','628427fc-211e-497e-9e9b-4bab889bcc83','f0047454-3be9-4570-a8ef-c8fe8805456a'].map(id=>SHOP+id+'.jpg');
+const VIDEOS=['12bfd2740f444912b2e065f7429067e9','fec873559fba4dec8caf6399173084cb','b8139a259fc041f4aca0940b8b732183'].map(id=>'https://cdn.shopify.com/videos/c/o/v/'+id+'.mp4');
+const WOW=[
+ {img:PHOTOS[0],when:'Week 9 · 28 Oct',area:'Maths',text:'“Three stones, no counting!”',who:'FS2, spotting 3 at a glance'},
+ {img:PHOTOS[1],when:'Week 8 · 21 Oct',area:'Literacy',text:'Wrote her whole name, unprompted',who:'FS2'},
+ {img:PHOTOS[2],when:'Week 7 · 14 Oct',area:'Physical',text:'First snip all the way across',who:'FS1, using scissors'},
+ {img:PHOTOS[3],when:'Week 6 · 7 Oct',area:'Comm. & Language',text:'Retold the whole Gruffalo',who:'FS1'}
+];
+const GALLERY=[{v:VIDEOS[0]},{img:PHOTOS[4]},{img:PHOTOS[5]},{v:VIDEOS[1]},{img:PHOTOS[6]},{img:PHOTOS[7]},{v:VIDEOS[2]},{img:PHOTOS[8]},{img:PHOTOS[9]},{img:PHOTOS[10]}];
+function media(m,alt){
+  const el=document.createElement(m.v?'video':'img');
+  if(m.v){el.src=m.v+'#t=0.1';el.muted=true;el.loop=true;el.playsInline=true;el.preload='metadata';el.controls=true}
+  else{el.src=m.img;el.alt=alt||'';el.loading='lazy';el.decoding='async'}
+  el.addEventListener('error',()=>{const f=document.createElement('div');f.className='fallback';f.textContent=m.v?'session video':'session photo';el.replaceWith(f)});
+  return el;
+}
+(function(){
+  const h=WOW[0], hero=document.getElementById('wowHero');
+  hero.querySelector('.photo').appendChild(media(h,h.text));
+  hero.querySelector('figcaption').innerHTML='';
+  hero.querySelector('figcaption').append(h.text,Object.assign(document.createElement('small'),{textContent:h.when+' · '+h.who}));
+  const wall=document.getElementById('wowWall');
+  WOW.forEach((w,i)=>{
+    const card=document.createElement('article');card.className='wow';
+    card.innerHTML=`<div class="pic">${i===0?'<span class="star">This week</span>':''}</div><div class="cap"><p class="hand"></p><div class="when"><span></span><span class="chip" style="padding:2px 9px;font-size:.74rem"></span></div></div>`;
+    card.querySelector('.pic').prepend(media(w,w.text));
+    card.querySelector('.hand').textContent=w.text;
+    card.querySelector('.when span').textContent=w.when;
+    card.querySelector('.chip').textContent=w.area;
+    wall.appendChild(card);
+  });
+  const g=document.getElementById('gallery');
+  GALLERY.forEach(m=>{const d=document.createElement('figure');d.className='gitem';d.appendChild(media(m,'A moment from a Heal with Honey session'));g.appendChild(d)});
+})();
+go((location.hash||'#home').slice(1),false);
+
+/* ---------------- EYFS data ---------------- */
+// [statement, status s/e/n, week secured (0 = before term)]
+const AREAS=[
+ {id:'cl',name:'Communication & Language',short:'Comm. & Language',prime:true,c:'--sky',
+  tip:'At bedtime, read a favourite book, then ask Zara to tell YOU the story using the pictures. Let her get it a bit wrong!',
+  y34:[['Enjoy listening to longer stories and remember much of what happens','s',0],['Understand a question or instruction that has two parts','s',0],['Understand ‘why’ questions','s',0],['Use longer sentences of four to six words','s',0],['Start a conversation and continue it for many turns','s',0],['Use talk to organise themselves and their play','s',0]],
+  rec:[['Understand how to listen carefully and why listening is important','s',2],['Learn new vocabulary and use it through the day','s',0],['Ask questions to find out more and check understanding','e'],['Articulate ideas and thoughts in well-formed sentences','s',5],['Describe events in some detail','e'],['Retell a story using some exact repetition and some of their own words','n']]},
+ {id:'ps',name:'Personal, Social & Emotional',short:'PSED',prime:true,c:'--clay',
+  tip:'When she’s frustrated, name it together: “That puzzle is tricky. You feel cross.” Then wait before helping.',
+  y34:[['Select and use activities and resources, with help when needed','s',0],['Play with one or more children, extending play ideas','s',0],['Increasingly follow rules, understanding why they matter','s',0],['Talk about feelings using words like happy, sad, angry or worried','s',0],['Be increasingly independent in meeting their own care needs','s',0],['Talk with others to solve conflicts','e']],
+  rec:[['See themselves as a valuable individual','s',0],['Build constructive and respectful relationships','s',3],['Express their feelings and consider the feelings of others','e'],['Show resilience and perseverance in the face of challenge','e'],['Manage their own needs, such as hygiene and dressing','s',0],['Think about the perspectives of others','n']]},
+ {id:'pd',name:'Physical Development',short:'Physical',prime:true,c:'--sage',
+  tip:'Tongs, pegs and play-dough all build pencil muscles. Try moving pasta from bowl to bowl with kitchen tongs.',
+  y34:[['Use one-handed tools, such as snipping paper with scissors','s',0],['Use a comfortable grip with good control when holding pencils','s',0],['Show a preference for a dominant hand','s',0],['Go up steps and stairs using alternate feet','s',0],['Be increasingly independent getting dressed and undressed','s',0]],
+  rec:[['Use a range of small tools competently, safely and confidently','s',4],['Develop the foundations of a fast, accurate handwriting style','e'],['Refine movement skills: hopping, skipping, climbing','s',0],['Develop overall body strength, balance and coordination','s',0],['Combine different movements with ease and fluency','e']]},
+ {id:'li',name:'Literacy',short:'Literacy',prime:false,c:'--honey',
+  tip:'Play “I spy” with sounds, not letter names: “I spy something beginning with /sss/”.',
+  y34:[['Understand the five key concepts about print','s',0],['Spot and suggest rhymes','s',0],['Count or clap syllables in a word','s',0],['Recognise words with the same initial sound','s',0],['Write some or all of their name','s',0],['Write some letters accurately','s',0]],
+  rec:[['Read individual letters by saying the sounds for them','s',3],['Blend sounds into words to read short words','e'],['Read some letter groups that represent one sound (sh, ch, th)','n'],['Form lower-case and capital letters correctly','e'],['Spell words by identifying the sounds','n'],['Re-read books to build confidence and fluency','e']]},
+ {id:'ma',name:'Mathematics',short:'Maths',prime:false,c:'--sage',
+  tip:'At snack time: “You have 5 grapes. If you eat one, how many now?” One more and one less, with real food.',
+  y34:[['Recognise up to 3 objects without counting (subitising)','s',0],['Recite numbers past 5','s',0],['Know the last number counted is the total','s',0],['Show ‘finger numbers’ up to 5','s',0],['Compare quantities using ‘more than’ and ‘fewer than’','s',0],['Extend and create ABAB patterns','s',0]],
+  rec:[['Count objects, actions and sounds','s',0],['Subitise small quantities','s',6],['Link the numeral with its value','s',7],['Count beyond ten','s',2],['Compare numbers','e'],['Understand one more than and one less than','e'],['Explore the composition of numbers to 10','n']]},
+ {id:'uw',name:'Understanding the World',short:'Understanding the World',prime:false,c:'--clay',
+  tip:'On a walk, collect three things that have fallen from trees. Talk about where they came from.',
+  y34:[['Use all their senses exploring natural materials','s',0],['Talk about what they see, using a wide vocabulary','s',0],['Begin to make sense of their own life story','s',0],['Plant seeds and care for growing plants','s',0],['Explore how things work','s',0]],
+  rec:[['Talk about members of their immediate family and community','s',0],['Name and describe people familiar to them','s',1],['Draw information from a simple map','n'],['Explore the natural world around them','s',5],['Describe what they see, hear and feel outside','s',8],['Understand the effect of changing seasons on nature','e']]},
+ {id:'ea',name:'Expressive Arts & Design',short:'Expressive Arts',prime:false,c:'--sky',
+  tip:'Put on a song she knows and stop it mid-line. Can she sing the next bit on the right note?',
+  y34:[['Take part in pretend play, using one object to represent another','s',0],['Explore different materials freely','s',0],['Create closed shapes and use them to represent objects','s',0],['Explore colour and colour-mixing','s',0],['Remember and sing entire songs','s',0]],
+  rec:[['Explore and refine artistic effects to express ideas and feelings','s',0],['Create collaboratively, sharing ideas and resources','e'],['Develop storylines in their pretend play','s',9],['Sing increasingly matching the pitch and melody','e'],['Explore music making and dance, solo or in groups','s',4]]}
+];
+const STORIES=[
+ {w:9,date:'Tue 28 Oct',title:'A bridge for the snail',bg:'--sage-soft',cap:'twigs, string & one very patient snail',areas:['ea','ma','cl'],
+  text:'Zara decided the clay snail needed to cross the “river” (a blue scarf). She built a bridge from twigs, tested it, watched it fall, and tried again with shorter twigs. “It needs more legs!” She counted 6 twig legs and told me the snail was safe now.',
+  next:'Comparing lengths: longer, shorter, the same.'},
+ {w:8,date:'Tue 21 Oct',title:'Listening to the rain',bg:'--sky-soft',cap:'on the balcony, after the storm',areas:['uw','cl'],
+  text:'We stood at the balcony door and listened. Zara described the rain as “tapping, then dripping, then quiet.” She noticed puddles were “shiny like a mirror” and asked where the water goes.',
+  next:'Follow her question: where does water go? A simple water-tray experiment.'},
+ {w:6,date:'Tue 7 Oct',title:'Three stones, no counting',bg:'--honey-soft',cap:'pebbles on a dark cloth',areas:['ma'],
+  text:'I flashed a handful of pebbles under a cloth for one second. Zara said “three!” before I had lifted it fully. By the end she was spotting four as “two and two”, which is the start of seeing number bonds.',
+  next:'Subitising 5 in dice patterns, then “5 and 1 more”.'}
+];
+let band='rec', filter='li';
+const col=v=>`var(${v})`;
+const areaById=id=>AREAS.find(a=>a.id===id);
+
+// home area list
+document.getElementById('areaList').innerHTML=AREAS.map(a=>`<div class="area"><span class="dot" style="background:${col(a.c)}"></span><div><b>${a.name}</b><small>${a.prime?'Prime area':'Specific area'}</small></div></div>`).join('');
+
+function render(){
+  const all=AREAS.flatMap(a=>a[band].map(s=>({a,s})));
+  const n={s:0,e:0,n:0}; all.forEach(x=>n[x.s[1]]++);
+  const newThisTerm=all.filter(x=>x.s[1]==='s'&&x.s[2]>0).length;
+  document.getElementById('totals').innerHTML=
+   `<div class="t"><b>${n.s}</b><span>secure</span></div><div class="t"><b>${n.e}</b><span>emerging</span></div><div class="t"><b>${n.n}</b><span>not yet</span></div><div class="t"><b>+${newThisTerm}</b><span>secured this term</span></div>`;
+  document.getElementById('barsSub').textContent='Development Matters statements, '+(band==='rec'?'Reception band':'3 & 4-year-olds band');
+  document.getElementById('bars').innerHTML=AREAS.map(a=>{
+    const L=a[band], t=L.length, c={s:0,e:0,n:0}; L.forEach(s=>c[s[1]]++);
+    const p=k=>(c[k]/t*100).toFixed(1)+'%';
+    return `<div class="bar-row"><div class="lbl">${a.short}<small>${a.prime?'Prime':'Specific'} · ${t} statements</small></div><div class="bar" role="img" aria-label="${a.name}: ${c.s} secure, ${c.e} emerging, ${c.n} not yet"><i style="width:${p('s')};background:var(--sage)"></i><i style="width:${p('e')};background:var(--honey)"></i></div><div class="pct">${Math.round(c.s/t*100)}%</div></div>`;
+  }).join('');
+  drawLine(all);
+  // filters
+  document.getElementById('filters').innerHTML=[`<button data-f="all" aria-pressed="${filter==='all'}">All areas</button>`].concat(AREAS.map(a=>`<button data-f="${a.id}" aria-pressed="${filter===a.id}"><i style="background:${col(a.c)}"></i>${a.short}</button>`)).join('');
+  document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{filter=b.dataset.f;render()});
+  const order={e:0,n:1,s:2};
+  const list=all.filter(x=>filter==='all'||x.a.id===filter).sort((x,y)=>order[x.s[1]]-order[y.s[1]]);
+  const lab={s:'Secure',e:'Emerging',n:'Not yet'};
+  document.getElementById('stmts').innerHTML=list.map(x=>`<li><span class="a"><i style="background:${col(x.a.c)}"></i>${x.a.name}</span><p>${x.s[0]}</p><div><span class="pill ${x.s[1]}">${lab[x.s[1]]}</span>${x.s[1]==='s'?`<div class="w">${x.s[2]>0?'week '+x.s[2]:'before term'}</div>`:''}</div></li>`).join('');
+  const tipArea=filter==='all'?areaById('li'):areaById(filter);
+  document.getElementById('tipText').textContent=tipArea.tip;
+}
+function drawLine(all){
+  const W=420,H=230,pl=34,pr=40,pt=16,pb=30,weeks=10;
+  const pts=[];for(let w=0;w<=weeks;w++){pts.push(w<=9?all.filter(x=>x.s[1]==='s'&&x.s[2]<=w).length:null)}
+  const total=all.length, max=Math.ceil(total/10)*10;
+  const x=w=>pl+(W-pl-pr)*w/weeks, y=v=>pt+(H-pt-pb)*(1-v/max);
+  let g='';
+  for(let v=0;v<=max;v+=10){g+=`<line class="grid" x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}"/><text x="${pl-8}" y="${y(v)+4}" text-anchor="end">${v}</text>`}
+  [0,2,4,6,8,10].forEach(w=>g+=`<text x="${x(w)}" y="${H-8}" text-anchor="middle">${w===0?'start':'wk '+w}</text>`);
+  const real=pts.map((v,i)=>[i,v]).filter(p=>p[1]!==null);
+  const d=real.map((p,i)=>(i?'L':'M')+x(p[0]).toFixed(1)+' '+y(p[1]).toFixed(1)).join(' ');
+  const last=real[real.length-1];
+  const area=d+` L${x(last[0])} ${y(0)} L${x(0)} ${y(0)} Z`;
+  g+=`<path class="area-fill" d="${area}"/><path class="ln" d="${d}"/>`;
+  real.slice(0,-1).forEach(p=>g+=`<circle class="dot" cx="${x(p[0])}" cy="${y(p[1])}" r="3.2"/>`);
+  g+=`<circle class="end" cx="${x(last[0])}" cy="${y(last[1])}" r="5"/><text class="endlbl" x="${x(last[0])+9}" y="${y(last[1])+4}">${last[1]}</text>`;
+  g+=`<line class="grid" stroke-dasharray="3 4" x1="${pl}" x2="${W-pr}" y1="${y(total)}" y2="${y(total)}" style="stroke:var(--ink-soft)"/><text x="${W-pr}" y="${y(total)-6}" text-anchor="end">all ${total}</text>`;
+  document.getElementById('line').innerHTML=`<svg class="line" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Running total of statements secured, from ${pts[0]} at the start of term to ${last[1]} after week ${last[0]}, out of ${total}">${g}</svg>`;
+}
+document.querySelectorAll('[data-band]').forEach(b=>b.onclick=()=>{band=b.dataset.band;document.querySelectorAll('[data-band]').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
+document.getElementById('stories').innerHTML=STORIES.map(s=>`<article class="story"><div class="img" style="background:${col(s.bg)}"><span>${s.cap}</span></div><div class="body"><p class="eyebrow">Week ${s.w} · ${s.date}</p><h4>${s.title}</h4><div class="tags">${s.areas.map(id=>{const a=areaById(id);return `<span class="chip" style="padding:3px 10px;font-size:.78rem"><i style="background:${col(a.c)}"></i>${a.short}</span>`}).join('')}</div><p>${s.text}</p><p class="next"><b>Next step:</b> ${s.next}</p></div></article>`).join('');
+render();
+
+/* ---------------- enrol form ---------------- */
+const stepNames=['Parent details','Your child','Reports','Consent'];
+let step=0;
+const steps=[...document.querySelectorAll('.step')];
+const stepper=document.getElementById('stepper');
+function showStep(i){
+  step=i;
+  steps.forEach(s=>s.hidden=+s.dataset.step!==i);
+  stepper.innerHTML=stepNames.map((n,k)=>`<li><button type="button" data-k="${k}" ${k===i?'aria-current="step"':''} class="${k<i||i===4?'done':''}"><span class="n">${k<i||i===4?'✓':k+1}</span>${n}</button></li>`).join('');
+  stepper.querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=+b.dataset.k;if(k<step||i===4)showStep(k)});
+  document.getElementById('nav').hidden=i===4;
+  document.getElementById('back').style.visibility=i===0?'hidden':'visible';
+  document.getElementById('next').textContent=i===3?'Submit enrolment':'Continue';
+  document.getElementById('err').textContent='';
+  if(i===3) sizeSig();
+}
+function validate(i){
+  const fs=steps[i]; const bad=[...fs.querySelectorAll('[required]')].filter(el=>el.type==='checkbox'?!el.checked:!el.value.trim());
+  if(i===0){const em=document.getElementById('p_email');if(em.value&&!/^\S+@\S+\.\S+$/.test(em.value))bad.push(em)}
+  if(i===3&&!signed) return 'Please add your signature.';
+  if(i===3&&document.getElementById('c_health').value.trim()&&!document.getElementById('k_health').checked) return 'Please tick the health information consent, since you shared health details.';
+  if(bad.length){bad[0].focus();return 'Please complete the highlighted '+(bad[0].type==='checkbox'?'consent':'field')+' to continue.'}
+  return '';
+}
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const m=validate(step); if(m){document.getElementById('err').textContent=m;return}
+  if(step<3){showStep(step+1);document.getElementById('form').scrollIntoView({block:'start'});return}
+  finish();
+});
+document.getElementById('back').onclick=()=>showStep(Math.max(0,step-1));
+document.getElementById('restart').onclick=()=>{document.getElementById('form').reset();Object.keys(fileStore).forEach(k=>{fileStore[k]=[];listFiles(k)});clearSig();yg();showStep(0)};
+
+// year group from DOB, using the 31 August cut-off used by British-curriculum schools in Dubai
+function yg(){
+  const v=document.getElementById('c_dob').value, out=document.getElementById('yg');
+  if(!v){out.textContent='';return}
+  const d=new Date(v+'T00:00:00'), now=new Date();
+  const start=now.getMonth()>=8?now.getFullYear():now.getFullYear()-1;
+  const inRange=(y0)=>d>=new Date(y0,8,1)&&d<=new Date(y0+1,7,31);
+  const ay=start+'–'+String(start+1).slice(2);
+  out.textContent= inRange(start-4)?`FS1 in ${ay} ✓`: inRange(start-5)?`FS2 in ${ay} ✓`: inRange(start-3)?`Starts FS1 next September`: `Outside FS1–FS2 for ${ay}. We’ll talk it through.`;
+}
+document.getElementById('c_dob').addEventListener('change',yg);
+
+// files
+const fileStore={nursery:[],spec:[]};
+function listFiles(k){
+  document.getElementById('list_'+k).innerHTML=fileStore[k].map((f,i)=>`<li><span>${f.name.replace(/[<>&]/g,'')}</span><span class="muted">${(f.size/1024/1024).toFixed(1)} MB</span></li>`).join('');
+}
+['nursery','spec'].forEach(k=>{
+  const inp=document.getElementById('up_'+k), zone=document.querySelector(`[data-drop="${k}"]`);
+  inp.addEventListener('change',()=>{fileStore[k]=fileStore[k].concat([...inp.files]);listFiles(k)});
+  zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('on')});
+  zone.addEventListener('dragleave',()=>zone.classList.remove('on'));
+  zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('on');fileStore[k]=fileStore[k].concat([...e.dataTransfer.files]);listFiles(k)});
+});
+
+// social media: disable platforms when "none"
+function smSync(){const none=document.querySelector('input[name=sm]:checked').value==='none';document.querySelectorAll('#platforms input').forEach(i=>i.disabled=none);document.getElementById('platforms').style.opacity=none?.45:1}
+document.querySelectorAll('input[name=sm]').forEach(r=>r.addEventListener('change',smSync));smSync();
+
+// signature
+const cv=document.getElementById('sig'), ctx=cv.getContext('2d'); let drawing=false, signed=false;
+function sizeSig(){const r=cv.getBoundingClientRect();if(!r.width)return;const dpr=window.devicePixelRatio||1;cv.width=r.width*dpr;cv.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.lineWidth=2.2;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=getComputedStyle(document.body).color;signed=false}
+function pos(e){const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+cv.addEventListener('pointerdown',e=>{drawing=true;cv.setPointerCapture(e.pointerId);ctx.beginPath();ctx.moveTo(...pos(e))});
+cv.addEventListener('pointermove',e=>{if(!drawing)return;ctx.lineTo(...pos(e));ctx.stroke();signed=true});
+cv.addEventListener('pointerup',()=>drawing=false);
+function clearSig(){ctx.clearRect(0,0,cv.width,cv.height);signed=false}
+document.getElementById('sigClear').onclick=clearSig;
+document.getElementById('s_date').valueAsDate=new Date();
+
+function finish(){
+  const val=id=>document.getElementById(id).value.trim();
+  const checked=sel=>[...document.querySelectorAll(sel+' input:checked:not(:disabled)')].map(i=>i.value);
+  const smLabel={none:'Not shared',hands:'Hands and work only',noface:'Face not shown',full:'Face visible'}[document.querySelector('input[name=sm]:checked').value];
+  const smP=checked('#platforms');
+  const rows=[
+    ['Plan',{sessions:'One-to-one sessions · AED 250 per session',progress:'Sessions + Family Progress · AED 350 per session',package:'4-session package · AED 1,000'}[document.querySelector('input[name=plan]:checked').value]],
+    ['Parent',val('p_name')+' ('+val('p_rel')+')'],
+    ['Child',val('c_name')+(document.getElementById('yg').textContent?' · '+document.getElementById('yg').textContent.replace(' ✓',''):'')],
+    ['Focus',checked('#goals').join(', ')||'Not specified'],
+    ['Reports uploaded',(fileStore.nursery.length+fileStore.spec.length)+' file(s)'],
+    ['Specialists',checked('#specs').join(', ')||'None'],
+    ['Share with nursery/specialists',document.getElementById('k_share').checked?'Yes':'No'],
+    ['Private progress photos',document.getElementById('k_record').checked?'Yes':'No'],
+    ['Social media',smLabel+(smP.length?' · '+smP.join(', '):'')],
+    ['Signed',val('s_name')+' · '+val('s_date')]
+  ];
+  const esc=s=>String(s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+  document.getElementById('summary').innerHTML=rows.map(r=>`<div><span>${r[0]}</span><span>${esc(r[1])}</span></div>`).join('');
+  document.getElementById('d_name').textContent=val('p_name').split(' ')[0]||'';
+  showStep(4);
+}
+showStep(0);
+window.addEventListener('resize',()=>{if(step===3&&!signed)sizeSig()});
+})();
+</script>
+
+</body>
+</html>
