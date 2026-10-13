@@ -1,6 +1,6 @@
-# Heal with Honey
+# Grow with Honey
 
-Website for Heal with Honey: weekly one-to-one early years (EYFS) sessions in Dubai for FS1 and FS2 children.
+Website for Grow with Honey: weekly one-to-one early years (EYFS) sessions in Dubai for FS1 and FS2 children.
 
 The whole site is one file, `index.html`, with three tabs: Home, Family progress (example) and Enrol.
 
