@@ -1,19 +1,13 @@
 # Grow with Honey
 
-Website for Grow with Honey: weekly one-to-one early years (EYFS) sessions in Dubai for FS1 and FS2 children.
+Website for Grow with Honey: one-to-one early years sessions at home in Dubai, focused on confidence and school readiness.
 
-The whole site is one file, `index.html`, with three tabs: Home, Family progress (example) and Enrol.
+The whole site is one file, `index.html`, with three tabs: Home, Progress example (made-up## Session photos and videos
 
-## Weekly wow moment
+Session media has been removed until written consent is in place and identifying details are edited out. Do not add child photos or videos without the family's written consent for that specific use.
 
-In `index.html`, find `const WOW=[` and add a new line at the top of the list:
-
-```js
-{img:'PHOTO LINK',when:'Week 10 · 4 Nov',area:'Maths',text:'What the child did',who:'FS2'},
-```
-
-The first entry shows as the "Wow moment of the week" at the top of the home page. Only post a child with the family's social media consent.
+child with the family's social media consent.
 
 ## Hosting
 
-Served by GitHub Pages from the `main` branch (Settings → Pages → Deploy from a branch → `main` / root).
+Served by GitHub Pages from the `main` branch (check Settings → Pages for the branch being served).
