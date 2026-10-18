@@ -142,6 +142,13 @@ section.view{padding-top:44px}
 .plan-pick input{accent-color:var(--honey);margin-top:4px}
 
 .plans.plans-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.travel{margin-top:22px;border:1px solid var(--line);border-radius:20px;padding:22px clamp(18px,3vw,30px);background:var(--card);display:grid;gap:12px}
+.travel h3{font-size:1.3rem}
+.travel dl{margin:0;display:grid;gap:10px}
+.travel dl div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 20px;border-top:1px solid var(--line);padding-top:10px}
+.travel dt{font-weight:600}
+.travel dd{margin:0}
+@media (max-width:640px){.travel dl div{grid-template-columns:minmax(0,1fr)}}
 .package{margin-top:18px;border:1.5px dashed var(--honey);border-radius:22px;padding:22px clamp(22px,3vw,34px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .package h3{font-size:1.4rem;margin:4px 0}
 
@@ -528,7 +535,15 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
         <button class="btn" data-plan="package">Choose this</button>
       </article>
     </div>
-    <p class="muted" style="margin-top:18px;max-width:46em">A travel charge may apply depending on where you live. I will confirm it, along with the full booking and cancellation terms, before you book or pay anything.</p>
+    <div class="travel">
+      <h3>Travel</h3>
+      <dl>
+        <div><dt>Within about 20 minutes of JVC</dt><dd>No travel charge<br><span class="muted">e.g. JVT, The Greens, Al Barsha, Barsha South, Sports City, Motor City, Arabian Ranches</span></dd></div>
+        <div><dt>About 20 to 40 minutes away</dt><dd>AED 50 per visit<br><span class="muted">e.g. Dubai Marina, JBR, Palm Jumeirah, Downtown, Business Bay, DIFC</span></dd></div>
+        <div><dt>Further afield</dt><dd>By arrangement</dd></div>
+      </dl>
+      <p class="muted">I will confirm your travel charge, along with the full booking and cancellation terms, before you book or pay anything.</p>
+    </div>
   </div>
 
   <!-- About -->
@@ -548,7 +563,8 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
   <div class="cta-band">
     <h2>Questions, or ready to book an introductory session? Get in touch.</h2>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a class="btn" href="https://wa.me/60108946239" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn" href="https://wa.me/971547991995" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn ghost" href="tel:+971547991995" style="color:var(--paper);border-color:var(--paper)">Call +971 54 799 1995</a>
       <a class="btn ghost" href="mailto:shahad.sidahmed@gmail.com" style="color:var(--paper);border-color:var(--paper)">Email</a>
     </div>
   </div>
@@ -787,7 +803,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
       <div class="step done-card" data-step="4" hidden>
         <p class="eyebrow">Almost there</p>
         <h2>Thank you, <span id="d_name"></span>.</h2>
-        <p class="muted">Online registration is still being set up, so this form has not been sent anywhere. To arrange an introductory session, please message me on <a href="https://wa.me/60108946239" target="_blank" rel="noopener">WhatsApp</a> or <a href="mailto:shahad.sidahmed@gmail.com">email</a>.</p>
+        <p class="muted">Online registration is still being set up, so this form has not been sent anywhere. To arrange an introductory session, please message me on <a href="https://wa.me/971547991995" target="_blank" rel="noopener">WhatsApp</a> or <a href="mailto:shahad.sidahmed@gmail.com">email</a>.</p>
         <div class="summary" id="summary"></div>
         <div><button type="button" class="btn ghost small" id="restart">Start again</button></div>
       </div>
@@ -803,7 +819,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
 
 <footer>
   <span>Grow with Honey · One-to-one early years sessions at home · Dubai, UAE</span>
-  <span><a href="https://wa.me/60108946239" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:shahad.sidahmed@gmail.com">shahad.sidahmed@gmail.com</a></span>
+  <span><a href="tel:+971547991995">+971 54 799 1995</a> (call or WhatsApp) · <a href="mailto:shahad.sidahmed@gmail.com">shahad.sidahmed@gmail.com</a></span>
 </footer>
 </main>
 
