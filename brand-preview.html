@@ -210,6 +210,7 @@ section.view{padding-top:44px}
 .about .portrait{width:100%;max-width:360px;justify-self:center;aspect-ratio:4/5;border-radius:200px 200px 26px 26px;background:var(--honey-soft) url(assets/frangipani.webp) center 40%/70% no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;max-width:100%}
 .about h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px}
 .about p+p{margin-top:12px}
+img.portrait{object-fit:cover;padding:0;height:auto}
 .ph{background:var(--honey-soft);padding:0 4px;border-radius:4px}
 
 .cta-band{margin-top:56px;background:#5A3A2A;color:#FAF7F1;position:relative;overflow:hidden;border-radius:28px;padding:44px clamp(24px,5vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
@@ -564,15 +565,13 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
 
   <!-- About -->
   <div class="block about">
-    <div class="portrait" role="img" aria-label="Photo of Shahad to follow"></div>
+    <img class="portrait" src="assets/shahad.webp" alt="Shahad Hussain" width="640" height="800" loading="lazy">
     <div>
       <p class="eyebrow">Meet your child’s teacher</p>
       <h2>Hello, I’m Shahad.</h2>
       <p>I’m an early-years educator in Dubai. I hold a BSc (Hons) in Psychology from the University of Nottingham Malaysia and an NCFE CACHE Level 3 Diploma for the Early Years Workforce. I have taught in nurseries and international preschools in Dubai, Egypt and Sudan, including a year as a senior educator and acting head teacher.</p>
       <p>My psychology background shapes how I teach: children learn best when they feel safe, understood and interested. Sessions start from what your child loves, and build confidence alongside early literacy and maths.</p>
-      <!-- Show once the permit is approved:
-      <p class="hand" style="margin-top:16px">Holds a valid UAE private teacher work permit · Permit no. [________]</p>
-      -->
+      <p class="hand" style="margin-top:16px">Licensed private teacher · UAE Private Teacher Work Permit (MOHRE)</p>
     </div>
   </div>
 
