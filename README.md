@@ -11,3 +11,7 @@ child with the family's social media consent.
 ## Hosting
 
 Served by GitHub Pages from the `main` branch (check Settings → Pages for the branch being served).
+
+## Before launch
+
+`index.html` contains `<meta name="robots" content="noindex">` so search engines don't list the site yet. Remove it at launch.

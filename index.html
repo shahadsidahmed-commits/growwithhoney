@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grow with Honey</title>
+<meta name="robots" content="noindex">
 <meta name="description" content="One-to-one early years sessions at home in Dubai for children in FS1 and FS2, focused on confidence and school readiness. EYFS-informed and play-based.">
 <meta property="og:title" content="Grow with Honey">
 <meta property="og:description" content="One-to-one early years sessions at home in Dubai, focused on confidence and school readiness.">
@@ -12,62 +13,72 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Figtree:wght@400;500;600&family=Gaegu:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&family=Herr+Von+Muellerhoff&display=swap">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#FAF7F1">
 <style>
-/* Layout: a calm studio wall. Wide light margins, pebble shapes, hand-written "documentation" notes beside the work, three tabs (Home / Family progress / Enrol). */
+/* Grow with Honey. Palette and motifs from the Heal with Honey brand sheet. Keep robots noindex until launch. */
 :root{
-  --paper:#F5F4EC;      /* unbleached paper, faint green */
-  --card:#FFFEF9;
-  --ink:#2F2B25;        /* graphite */
-  --ink-soft:#6B655A;
-  --line:#E2DED0;
-  --honey:#D9962B;      /* accent */
-  --honey-soft:#F6E6C4;
-  --sage:#7E9873;
-  --sage-soft:#DFE7D6;
-  --clay:#C98C72;
-  --clay-soft:#F1DED3;
-  --sky:#9DB8BF;
-  --sky-soft:#DCE7E8;
-  --notyet:#E7E3D6;
-  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  /* Honey palette, from the Heal with Honey brand sheet */
+  --paper:#FAF7F1;      /* ivory */
+  --card:#FFFDF9;
+  --ink:#3A261C;        /* deep cocoa, body text */
+  --ink-soft:#6E5546;
+  --line:#EADFCB;
+  --honey:#D08A2C;      /* amber: fills and accents, not small text */
+  --honey-soft:#F4E1B8; /* honey cream */
+  --sage:#934C42;       /* rosewood: accent text, links, "secure" */
+  --sage-soft:#F5E1DB;
+  --clay:#E2A79A;       /* blush */
+  --clay-soft:#F8E8E3;
+  --sky:#E9B848;        /* golden honey */
+  --sky-soft:#FBF0D6;
+  --cocoa:#5A3A2A;
+  --notyet:#EFE7DA;
+  --f-display:"Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
   --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --f-hand:"Gaegu", "Comic Neue", "Marker Felt", cursive;
+  --f-hand:"Cormorant Garamond", Georgia, serif;
+  --f-script:"Herr Von Muellerhoff", "Brush Script MT", cursive;
   --r:22px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#1D1C18; --card:#262520; --ink:#EEEBE0; --ink-soft:#ADA794; --line:#3A3830;
-    --honey:#E8AE4C; --honey-soft:#4A3A1C; --sage:#9BB58F; --sage-soft:#2F3A2A;
-    --clay:#D9A089; --clay-soft:#4A3329; --sky:#A9C5CC; --sky-soft:#28383B; --notyet:#3A3830;
+    --paper:#221812; --card:#2C2018; --ink:#F5EBDD; --ink-soft:#CBB6A3; --line:#47352A;
+    --honey:#E9B848; --honey-soft:#4A3620; --sage:#EDB3A6; --sage-soft:#4A2E29;
+    --clay:#E2A79A; --clay-soft:#44302A; --sky:#E9B848; --sky-soft:#3F3220; --cocoa:#F4E1B8; --notyet:#3A2C22;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#1D1C18; --card:#262520; --ink:#EEEBE0; --ink-soft:#ADA794; --line:#3A3830;
-  --honey:#E8AE4C; --honey-soft:#4A3A1C; --sage:#9BB58F; --sage-soft:#2F3A2A;
-  --clay:#D9A089; --clay-soft:#4A3329; --sky:#A9C5CC; --sky-soft:#28383B; --notyet:#3A3830;
+  --paper:#221812; --card:#2C2018; --ink:#F5EBDD; --ink-soft:#CBB6A3; --line:#47352A;
+  --honey:#E9B848; --honey-soft:#4A3620; --sage:#EDB3A6; --sage-soft:#4A2E29;
+  --clay:#E2A79A; --clay-soft:#44302A; --sky:#E9B848; --sky-soft:#3F3220; --cocoa:#F4E1B8; --notyet:#3A2C22;
   color-scheme:dark;
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6;padding-inline:20px;padding-block:0 60px}
-h1,h2,h3,h4{font-family:var(--f-display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em;font-weight:600}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.005em;font-weight:500}
+h3,h4{font-weight:600}
 p{margin:0}
 a{color:inherit}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:8px}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:8px}
 .wrap{max-width:1120px;margin-inline:auto}
-.hand{font-family:var(--f-hand);font-size:1.3em;line-height:1.1;color:var(--ink-soft)}
-.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+.hand{font-family:var(--f-hand);font-style:italic;font-size:1.25em;line-height:1.2;color:var(--sage)}
+.eyebrow{font-family:var(--f-display);font-style:italic;font-size:1.08rem;font-weight:500;color:var(--sage)}
 .muted{color:var(--ink-soft)}
 
 /* ---------- top bar ---------- */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);margin-inline:-20px;padding:14px 20px;border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:1.2rem;text-decoration:none}
-.brand svg{width:34px;height:34px}
+.brand img{width:40px;height:auto}
+.brand .wm{display:inline-flex;align-items:baseline;gap:.28em;color:var(--ink)}
+.brand .s{font-family:var(--f-display);font-weight:600;font-size:1.55rem;line-height:1;letter-spacing:.005em}
+.brand .w{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.2rem;color:var(--sage)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand img{background:#FAF7F1;border-radius:12px;padding:3px}}
 .tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);padding:4px;border-radius:999px;flex-wrap:wrap}
 .tabs button{border:0;background:none;padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:500;font-size:.95rem;color:var(--ink-soft)}
 .tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
@@ -77,15 +88,25 @@ section.view{padding-top:44px}
 
 /* ---------- HOME ---------- */
 .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:28px 64px}
-.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:600}
-.hero h1 em{font-style:normal;color:var(--honey)}
+.hero h1{font-size:clamp(2.9rem,6.4vw,5.2rem);font-weight:500;letter-spacing:-.01em}
+.hero h1 em{font-style:normal}
 .hero .lede{font-size:1.15rem;max-width:34em;margin-top:22px;color:var(--ink-soft)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;cursor:pointer;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.small{padding:9px 16px;font-size:.92rem}
 .btn:disabled{opacity:.45;cursor:not-allowed}
-.hero-art{position:relative;aspect-ratio:1/1.05;max-width:100%}
+.hero-art{position:relative;max-width:100%}
+.hero-art{aspect-ratio:1/1.02;width:100%;max-width:500px;margin-inline:auto}
+.hero-art .c{position:absolute;border-radius:50%}
+.hero-art .c1{width:64%;aspect-ratio:1;left:0;top:6%;background:var(--honey-soft)}
+.hero-art .c2{width:46%;aspect-ratio:1;right:0;bottom:2%;background:var(--clay-soft)}
+.hero-art .c3{width:17%;aspect-ratio:1;left:10%;bottom:10%;background:var(--sky)}
+.hero-art .c4{width:9%;aspect-ratio:1;right:14%;top:8%;background:var(--clay)}
+.hero-art .hex{position:absolute;left:17%;top:12%;width:66%;aspect-ratio:.866;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--honey);}
+.hero-art .hex img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:cover;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.hero-art .fl{position:absolute;width:34%;left:4%;top:2%;height:auto;filter:drop-shadow(0 6px 10px rgba(90,58,42,.18))}
+.hero-art .tag{position:absolute;right:0;bottom:20%;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-family:var(--f-display);font-style:italic;font-size:1.15rem;color:var(--ink);box-shadow:0 8px 20px rgba(90,58,42,.10)}
 .hero-art .pebble{position:absolute;border-radius:58% 42% 55% 45%/52% 48% 52% 48%}
 .p1{inset:4% 14% 30% 2%;background:var(--sage-soft)}
 .p2{inset:38% 0 6% 34%;background:var(--honey-soft);border-radius:46% 54% 40% 60%/55% 45% 55% 45%!important}
@@ -104,7 +125,7 @@ section.view{padding-top:44px}
 .hero-art .note::before{content:"";display:block;width:56px;height:2px;background:var(--ink-soft);margin-bottom:6px;transform:rotate(-12deg)}
 
 .ages{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.88rem;font-weight:500}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:var(--honey-soft);border:1px solid var(--line);font-size:.88rem;font-weight:500}
 .chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
 
 .block{padding-block:56px;border-top:1px solid var(--line)}
@@ -127,13 +148,13 @@ section.view{padding-top:44px}
 .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
 .plan{border-radius:26px;padding:28px clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:14px;border:1.5px solid var(--line);background:var(--card)}
 .plan.plus{background:var(--honey-soft);border-color:var(--honey)}
+.plan.plus li::before{background:var(--sage)}
 .plan h3{font-size:1.6rem}
-.plan .price{font-family:var(--f-display);font-size:1.9rem;font-weight:600;line-height:1}
+.plan .price{font-family:var(--f-display);font-size:2.3rem;font-weight:600;line-height:1}
 .plan .price small{font-family:var(--f-body);font-size:.9rem;font-weight:400;color:var(--ink-soft)}
 .plan ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .plan li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:.95rem}
-.plan li::before{content:"";width:12px;height:12px;border-radius:50%;margin-top:6px;background:var(--sage)}
-.plan.plus li::before{background:var(--honey)}
+.plan li::before{content:"";width:11px;height:12px;margin-top:6px;background:var(--honey);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%)}
 .plan li.inherit{font-weight:600}
 .plan .btn{margin-top:auto;align-self:flex-start}
 .plan-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
@@ -142,6 +163,10 @@ section.view{padding-top:44px}
 .plan-pick input{accent-color:var(--honey);margin-top:4px}
 
 .plans.plans-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.note-band{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:8px 32px;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px clamp(18px,3vw,30px)}
+.note-band h3{font-size:1.25rem}
+.note-band p{color:var(--ink-soft)}
+@media (max-width:760px){.note-band{grid-template-columns:minmax(0,1fr)}}
 .travel{margin-top:22px;border:1px solid var(--line);border-radius:20px;padding:22px clamp(18px,3vw,30px);background:var(--card);display:grid;gap:12px}
 .travel h3{font-size:1.3rem}
 .travel dl{margin:0;display:grid;gap:10px}
@@ -159,14 +184,15 @@ section.view{padding-top:44px}
 .compare .h small{font-family:var(--f-body);font-weight:400;font-size:.85rem;color:var(--ink-soft)}
 .compare .k{font-weight:600;font-size:.92rem;color:var(--ink-soft)}
 .compare .one{background:var(--honey-soft)}
-.compare .h.one{background:var(--honey);color:#2F2B25}
-.compare .h.one small{color:#3d3527}
+.compare .h.one{background:#5A3A2A;color:#FAF7F1}
+.compare .h.one small{color:#F4E1B8}
 .compare-foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:28px}
 .compare-foot .hand{font-size:1.35rem;color:var(--ink)}
 
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .who article{padding:28px;border-radius:var(--r);display:flex;flex-direction:column;gap:12px}
 .who article:nth-child(1){background:var(--sage-soft)}
+.who article:nth-child(1){background:var(--sky-soft)}
 .who article:nth-child(2){background:var(--clay-soft)}
 .who h3{font-size:1.45rem}
 .who ul{margin:4px 0 0;padding-left:1.1em;display:grid;gap:6px}
@@ -174,7 +200,7 @@ section.view{padding-top:44px}
 .steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
 .steps li{list-style:none;padding:20px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
 .steps li b{font-family:var(--f-display);font-size:1.05rem}
-.steps li span.min{font-family:var(--f-hand);font-size:1.15rem;color:var(--honey)}
+.steps li span.min{font-family:var(--f-hand);font-style:italic;font-size:1.15rem;color:var(--sage)}
 .steps{padding:0;margin:0}
 
 .areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
@@ -195,15 +221,17 @@ section.view{padding-top:44px}
 .tile.v::after{content:"▶";position:absolute;top:10px;right:12px;font-size:.8rem;color:var(--ink-soft)}
 
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:center}
-.about .portrait{width:100%;max-width:360px;justify-self:center;aspect-ratio:4/5;border-radius:200px 200px 26px 26px;background:linear-gradient(160deg,var(--honey-soft),var(--sage-soft));display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;max-width:100%}
+.about .portrait{width:100%;max-width:360px;justify-self:center;aspect-ratio:4/5;border-radius:200px 200px 26px 26px;background:var(--honey-soft) url(assets/frangipani.webp) center 40%/70% no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;max-width:100%}
 .about h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px}
 .about p+p{margin-top:12px}
 .about img.portrait{object-fit:cover;padding:0;height:auto;background:none}
 .ph{background:var(--honey-soft);padding:0 4px;border-radius:4px}
 
-.cta-band{margin-top:56px;background:var(--ink);color:var(--paper);border-radius:28px;padding:44px clamp(24px,5vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band{margin-top:56px;background:#5A3A2A;color:#FAF7F1;position:relative;overflow:hidden;border-radius:28px;padding:44px clamp(24px,5vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band::after{content:"";position:absolute;right:-40px;bottom:-60px;width:220px;aspect-ratio:47/50;background:url(assets/frangipani.webp) center/contain no-repeat;opacity:.9;pointer-events:none}
+.cta-band > *{position:relative;z-index:1}
 .cta-band h2{font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:16em}
-.cta-band .btn{background:var(--honey);border-color:var(--honey);color:#2F2B25}
+.cta-band .btn{background:var(--sky);border-color:var(--sky);color:#3A261C}
 .cta-band .btn.ghost{background:transparent}
 
 /* ---------- PROGRESS ---------- */
@@ -340,6 +368,8 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
   .hero,.about,.block-head,.charts,.checklist,.enrol{grid-template-columns:minmax(0,1fr)}
   .hero{gap:20px;padding-bottom:40px}
   .hero-art{max-width:420px;width:100%;margin-inline:auto}
+  .hero-art{max-width:340px}
+  .hero-art .tag{font-size:1rem;padding:8px 14px;bottom:14%}
   .steps{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
   .wow-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
   .plans,.plans.plans-3,.plan-pick{grid-template-columns:minmax(0,1fr)}
@@ -360,6 +390,9 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
   .child{grid-template-columns:auto minmax(0,1fr)}
   .child .seg{grid-column:1/-1}
   .tabs button{padding:7px 12px;font-size:.88rem}
+  .top{padding-block:10px}
+  .top .wrap{gap:10px}
+  .brand .s{font-size:1.35rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
@@ -368,13 +401,13 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#home" data-go="home" aria-label="Grow with Honey home">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 34.7 11.5v17L20 37 5.3 28.5v-17Z" fill="var(--honey)"/><circle cx="20" cy="20" r="6.5" fill="var(--paper)"/><circle cx="20" cy="20" r="2.6" fill="var(--honey)"/></svg>
-      Grow with Honey
+      <img src="assets/h-mark.png" alt="" width="40" height="37">
+      <span class="wm"><span class="s">Grow</span><span class="w">with</span><span class="s">Honey</span></span>
     </a>
     <nav class="tabs" role="tablist" aria-label="Site sections">
       <button role="tab" id="t-home" aria-controls="home" aria-selected="true" data-go="home">Home</button>
       <button role="tab" id="t-progress" aria-controls="progress" aria-selected="false" data-go="progress">Progress example</button>
-      <button role="tab" id="t-enrol" aria-controls="enrol" aria-selected="false" data-go="enrol">Register</button>
+      <button role="tab" id="t-enrol" aria-controls="enrol" aria-selected="false" data-go="enrol">Enquire</button>
     </nav>
   </div>
 </header>
@@ -389,7 +422,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
       <h1 style="margin-top:14px">Confident, curious and <em>ready for school</em>.</h1>
       <p class="lede">Play-based, EYFS-informed sessions for children in FS1 and FS2. One child and one teacher, in your home, building confidence and early learning together.</p>
       <div class="ctas">
-        <button class="btn" data-go="enrol">Register your interest</button>
+        <button class="btn" data-go="enrol">Enquire about sessions</button>
         <button class="btn ghost" data-go="home" data-scroll="plans">See prices</button>
       </div>
       <div class="ages">
@@ -398,10 +431,11 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
         <span class="chip"><i style="background:var(--clay)"></i>EYFS-informed · Reggio-inspired</span>
       </div>
     </div>
-    <figure class="hero-art" style="margin:0" aria-hidden="true">
-      <div class="pebble p1"></div><div class="pebble p2"></div><div class="pebble p3"></div>
-      <div class="photo"></div>
-      <figcaption class="note hand">one child · one teacher · one hour<small>sessions in your home</small></figcaption>
+    <figure class="hero-art" style="margin:0">
+      <span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+      <div class="hex"><img src="assets/shahad.webp" alt="Shahad, known to the children as Miss Sha Sha" width="640" height="800"></div>
+      <img class="fl" src="assets/frangipani.webp" alt="" width="470" height="500">
+      <figcaption class="tag">Miss Sha Sha</figcaption>
     </figure>
   </div>
 
@@ -468,7 +502,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
         </ul>
       </article>
     </div>
-    <p class="muted" style="margin-top:22px;max-width:46em">Preparing for a school assessment? I can help your child feel more comfortable with an unfamiliar adult and new kinds of tasks. I don’t coach rehearsed answers, and no one can guarantee an admissions outcome.</p>
+    <div class="note-band"><h3>Preparing for a school assessment?</h3><p>I can help your child feel more comfortable with an unfamiliar adult and new kinds of tasks. I don’t coach rehearsed answers, and no one can guarantee an admissions outcome.</p></div>
   </div>
 
   <!-- Session -->
@@ -536,7 +570,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
         <button class="btn" data-plan="package">Choose this</button>
       </article>
     </div>
-    <p class="muted" style="margin-top:18px;max-width:46em">Sessions take place in your home. Depending on your area, a small travel charge may apply. I will confirm it, along with the full booking and cancellation terms, before you book or pay anything.</p>
+    <div class="note-band"><h3>Travel and terms</h3><p>Sessions take place in your home. Depending on your area, a small travel charge may apply. I will confirm it, along with the full booking and cancellation terms, before you book or pay anything.</p></div>
   </div>
 
   <!-- About -->
@@ -631,7 +665,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
 <section class="view" id="enrol" role="tabpanel" aria-labelledby="t-enrol" hidden>
   <div class="enrol">
     <aside class="enrol-side">
-      <p class="eyebrow">Register your interest</p>
+      <p class="eyebrow">Enquire about sessions</p>
       <h1>Tell me about your child</h1>
       <p class="muted">Takes about 10 minutes. Have your child’s latest nursery report to hand if you can.</p>
       <ol class="stepper" id="stepper"></ol>
@@ -812,7 +846,7 @@ footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);display
 </section>
 
 <footer>
-  <span>Grow with Honey · One-to-one early years sessions at home · Dubai, UAE</span>
+  <span>Grow with Honey · One-to-one early years sessions at home · Dubai, UAE<br>Part of Heal with Honey</span>
   <span><a href="tel:+971547991995">+971 54 799 1995</a> (call or WhatsApp)</span>
 </footer>
 </main>
